@@ -1,0 +1,127 @@
+body{
+    overflow-x: hidden;
+}
+.active{
+    pointer-events: none;
+    cursor: default;
+    color: gray;
+}
+#root{
+    width: 100vw;
+    height: 100vh;
+}
+#main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: stretch;
+    background-color: whitesmoke;
+}
+.Chat_main{
+    position: relative;
+    height: 100vh;
+    width: 25vw;
+    margin-left: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.messages{
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: aqua;
+    height: 80vh;
+    width: 25vw;
+    border: gray 1px solid;
+    border-radius: 2%;
+}
+.navRoomList{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 90%;
+    background-color: wheat;
+}
+.ListRooms{
+    width: 25vw ;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+}
+.Chat_container{
+    padding-left: 3%;
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+
+}
+.VideoChat{
+    position: relative;
+    padding-top: 5vh;
+    display: grid;
+    width: 50vw;
+    height: 90vh;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50% auto;
+}
+@media all and (max-aspect-ratio: 6/9) {
+    .VideoChat{
+        grid-template-columns: 100%;
+    }
+}
+.user{
+    background-color: bisque;
+}
+.video{
+    width: -webkit-fill-available;
+    height: initial;
+}
+.btn{
+    background-color: white;
+}
+.chat{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.name{
+    width: 30%;
+}
+.message{
+    word-break: break-all;
+}
+.author{
+    cursor: pointer;
+    user-select: none;
+}.close {
+     position: relative;
+     width: 32px;
+     height: 32px;
+     opacity: 0.3;
+ }
+.room{
+    float: left;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
