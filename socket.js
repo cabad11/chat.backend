@@ -42,7 +42,7 @@ const runSockets = (server) => {
             delete sockets[socket.id];
         }
 
-        socket.on('message', (name) => {
+        socket.on('initUser', (name) => {
             socket.name = name.name;
             socket.on('addRoom',(config)=> {
                 socket.leaveAll();
